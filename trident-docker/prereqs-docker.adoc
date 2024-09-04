@@ -1,0 +1,123 @@
+---
+sidebar: sidebar 
+permalink: trident-docker/prereqs-docker.html 
+keywords: deploy, astra trident, docker, trident for docker, nfs, iscsi, protcol, nfs protocol, iscsi protocol, configure host, host config 
+summary: Você precisa instalar e configurar os pré-requisitos de protocolo necessários no seu host antes de implantar o Astra Trident. 
+---
+= Pré-requisitos para implantação
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Você precisa instalar e configurar os pré-requisitos de protocolo necessários no seu host antes de implantar o Astra Trident.
+
+
+
+== Verifique os requisitos
+
+* Verifique se sua implantação atende a todos link:../trident-get-started/requirements.html["requisitos"]os .
+* Verifique se você tem uma versão suportada do Docker instalada. Se a versão do Docker estiver desatualizada, https://docs.docker.com/engine/install/["instale ou atualize-o."^].
++
+[listing]
+----
+docker --version
+----
+* Verifique se os pré-requisitos do protocolo estão instalados e configurados no seu host:
+
+
+[cols="3*"]
+|===
+| Protocolo | Sistema operacional | Comandos 
+
+
+| NFS  a| 
+RHEL 8 MAIS
+ a| 
+`sudo yum install -y nfs-utils`
+
+
+
+| NFS  a| 
+Ubuntu
+ a| 
+`sudo apt-get install -y nfs-common`
+
+
+
+| ISCSI  a| 
+RHEL 8 MAIS
+ a| 
+. Instale os seguintes pacotes de sistema:
++
+`sudo yum install -y lsscsi iscsi-initiator-utils sg3_utils device-mapper-multipath`
+
+. Verifique se a versão iscsi-iniciador-utils é 6,2.0,874-2.el7 ou posterior:
++
+`rpm -q iscsi-initiator-utils`
+
+. Definir a digitalização para manual:
++
+`sudo sed -i 's/^\(node.session.scan\).*/\1 = manual/' /etc/iscsi/iscsid.conf`
+
+. Ativar multipathing:
++
+`sudo mpathconf --enable --with_multipathd y --find_multipaths n`
+
++
+
+NOTE: Certifique-se de `etc/multipath.conf` que contém `find_multipaths no` `defaults` em .
+
+. Certifique-se de que `iscsid` e `multipathd` estão a funcionar:
++
+`sudo systemctl enable --now iscsid multipathd`
+
+. Ativar e iniciar `iscsi`:
++
+`sudo systemctl enable --now iscsi`
+
+
+
+
+
+| ISCSI  a| 
+Ubuntu
+ a| 
+. Instale os seguintes pacotes de sistema:
++
+`sudo apt-get install -y open-iscsi lsscsi sg3-utils multipath-tools scsitools`
+
+. Verifique se a versão Open-iscsi é 2,0.874-5ubuntu2.10 ou posterior (para bionic) ou 2,0.874-7.1ubuntu6.1 ou posterior (para focal):
++
+`dpkg -l open-iscsi`
+
+. Definir a digitalização para manual:
++
+`sudo sed -i 's/^\(node.session.scan\).*/\1 = manual/' /etc/iscsi/iscsid.conf`
+
+. Ativar multipathing:
++
+`sudo tee /etc/multipath.conf <<-'EOF'
+defaults {
+    user_friendly_names yes
+    find_multipaths no
+}
+EOF
+sudo systemctl enable --now multipath-tools.service
+sudo service multipath-tools restart`
+
++
+
+NOTE: Certifique-se de `etc/multipath.conf` que contém `find_multipaths no` `defaults` em .
+
+. Certifique-se de que `open-iscsi` e `multipath-tools` estão ativados e em execução:
++
+`sudo systemctl status multipath-tools`
+`sudo systemctl enable --now open-iscsi.service`
+`sudo systemctl status open-iscsi`
+
+
+
+|===
