@@ -17,8 +17,6 @@
   <block id="fdd380631ba8063e7b8f842282a01e40" category="list-text"><block ref="fdd380631ba8063e7b8f842282a01e40" category="inline-link-rx"></block></block>
   <block id="4af8991c21dff2f779496b8350d1124b" category="inline-link">Astra Trident 22,01</block>
   <block id="7669b0b69333e81c7c208aea3d1a3c6f" category="list-text"><block ref="7669b0b69333e81c7c208aea3d1a3c6f" category="inline-link-rx"></block></block>
-  <block id="cce172403b73af5c2a4e93081affcc7f" category="inline-link">Astra Trident 21,10</block>
-  <block id="606b9e83fb467a43b3065d4fd5037094" category="list-text"><block ref="606b9e83fb467a43b3065d4fd5037094" category="inline-link-rx"></block></block>
   <block id="3d522b99ca94333433532daa23e7ceab" category="summary">Encontre respostas para as perguntas mais frequentes sobre a instalação, configuração, atualização e solução de problemas do Astra Trident.</block>
   <block id="af2a4d2810d86aa0169c117f82682f9a" category="doc">Perguntas frequentes</block>
   <block id="96ab491ef73d5db0cd15f55e1552cc22" category="section-title">Questões gerais</block>
@@ -207,8 +205,6 @@
   <block id="865d5fc74524e198b7d4edc0b0f93cd6" category="paragraph"><block ref="865d5fc74524e198b7d4edc0b0f93cd6" category="inline-link-macro-rx"></block></block>
   <block id="955ddf0f7e289ee80cdea4b5324b620d" category="inline-link-macro">22,01</block>
   <block id="1d6d13ec4b4db5f5d3487f7624ba2730" category="paragraph"><block ref="1d6d13ec4b4db5f5d3487f7624ba2730" category="inline-link-macro-rx"></block></block>
-  <block id="ecdd0ca053bad0e4dd13561a556a27a2" category="inline-link-macro">21,10</block>
-  <block id="26868cf4e34a30cd32082fe3a81f7a5b" category="paragraph"><block ref="26868cf4e34a30cd32082fe3a81f7a5b" category="inline-link-macro-rx"></block></block>
   <block id="55559f520040667d3f8931728b37ef07" category="admonition">Versões anteriores a 21,07, redirecione para o site de documentação legado.</block>
   <block id="40e41fb2db11266b8f751c0d5c67cba0" category="inline-link">Base de Conhecimento NetApp (login necessário)</block>
   <block id="01005ecf4349194d1ec13d0ba516c9e5" category="paragraph">Para obter uma lista abrangente de artigos de solução de problemas, consulte<block ref="57f5c759ada931c6a2051314ca6ee99e" category="inline-link-rx"></block> . Você também encontrará informações sobre a solução de problemas relacionados ao Astra<block ref="695f48b1d8b7348c0e2828947d24161e" category="inline-link-rx"></block>.</block>
@@ -1159,9 +1155,6 @@
   <block id="f72ba1a3a498489a96fd8774bfa9ea9d" category="example-title">&lt;strong&gt; handling&lt;/strong&gt; de atualização automática do Kubernetes</block>
   <block id="f456a413d0506028374e871768a5f176" category="paragraph">Quando a versão do Kubernetes do cluster é atualizada para uma versão compatível, a operadora atualiza uma instalação existente do Astra Trident automaticamente e a altera para garantir que ela atenda aos requisitos da versão do Kubernetes.</block>
   <block id="d1aae6ea63eb5e7fe6a9fcea5f671406" category="admonition">Se o cluster for atualizado para uma versão não suportada, o operador impede a instalação do Astra Trident. Se o Astra Trident já tiver sido instalado com a operadora, um aviso será exibido para indicar que o Astra Trident está instalado em uma versão Kubernetes não suportada.</block>
-  <block id="c3b2fe84f143129d7a18ad12df229bc6" category="example-title">&lt;strong&gt; gerenciamento de clusters do Kubernetes usando o BlueXP  (anteriormente conhecido como Cloud Manager) &lt;/strong&gt;</block>
-  <block id="fd1117c82327fbe8671f26e897ceb8f4" category="inline-link-macro">Astra Trident usando BlueXP </block>
-  <block id="a76a1e164520105317267dc41b95e8ce" category="paragraph">Com <block ref="f8c16e8c21124ccc028d2db7fd32a98f" category="inline-link-macro-rx"></block>o , você pode atualizar para a versão mais recente do Astra Trident, adicionar e gerenciar classes de storage, conectá-las a ambientes de trabalho e fazer backup de volumes persistentes usando o Cloud Backup Service. O BlueXP  oferece suporte à implantação do Astra Trident usando o operador Trident, manualmente ou usando o Helm.</block>
   <block id="43e6c0a141c1737a96917c56c7e22a73" category="inline-link-macro">instalação usando o prefixo de referência do c</block>
   <block id="1a2de31d648d8c09e5c2a9257a5ad67b" category="paragraph">Se você tiver uma implantação existente que deve ser atualizada ou se você estiver procurando personalizar altamente sua implantação, considere <block ref="e214bf159dbaf6573cfe15f1373b92db" category="inline-link-macro-rx"></block>o . Esse é o método convencional de implantação do Astra Trident.</block>
   <block id="4c24a3b9facf2ea9fc7ed2ca52dab45d" category="inline-link-macro">personalize o seu prefixo de referência do bloco do cliente</block>
@@ -3807,4 +3800,6 @@
   <block id="76114b40ddbaf2bf18e9aee694563b40" category="sidebar">Provisionar e gerenciar volumes</block>
   <block id="f18a50f02f48551895d57b81dd288142" category="sidebar">Compartilhar volumes NFS em namespaces</block>
   <block id="62486fa65fc31c383ace8989549632ad" category="sidebar">Use snapshots</block>
+  <block id="15eaa3bd461b989a50d54376e8b82942" category="example-title">&lt;strong&gt;Gerenciamento de cluster Kubernetes usando o NetApp Console&lt;/strong&gt;</block>
+  <block id="28cfb8f261719a05032a41acccc32995" category="paragraph">Com o Astra Trident usando o NetApp Console, você pode atualizar para a versão mais recente do Astra Trident, adicionar e gerenciar classes de armazenamento e conectá-las a ambientes de trabalho e fazer backup de volumes persistentes usando o Cloud Backup Service. O Console oferece suporte à implantação do Astra Trident usando o operador Trident , manualmente ou usando o Helm.</block>
 </blocks>
