@@ -16,6 +16,7 @@ O https://github.com/NetApp/trident/releases["Pacote de instalação do Trident"
 
 
 
+[[available-commands-and-options]]
 == Comandos e opções disponíveis
 
 Para obter informações de uso, execute `tridentctl --help`o .
@@ -62,6 +63,7 @@ CAUTION: A interface REST DO Trident pode ser configurada para ouvir e servir ap
 
 
 
+[[create]]
 == `create`
 
 Você pode usar executar `create` o comando para adicionar um recurso ao Astra Trident.
@@ -76,6 +78,7 @@ Opção disponível
 
 
 
+[[delete]]
 == `delete`
 
 Você pode executar o `delete` comando para remover um ou mais recursos do Astra Trident.
@@ -95,6 +98,7 @@ Opções disponíveis:
 
 
 
+[[get]]
 == `get`
 
 Você pode executar o `get` comando para obter um ou mais recursos do Astra Trident.
@@ -116,6 +120,7 @@ Opções disponíveis:
 
 
 
+[[images]]
 == `images`
 
 Você pode executar `images` o sinalizador para imprimir uma tabela das imagens de contentor que o Astra Trident precisa.
@@ -130,6 +135,7 @@ Flags: ``-h, --help`: Help for images.
 
 
 
+[[import-volume]]
 == `import volume`
 
 Você pode executar o `import volume` comando para importar um volume existente para o Astra Trident.
@@ -151,6 +157,7 @@ Bandeiras -
 
 
 
+[[install]]
 == `install`
 
 Você pode executar `install` os sinalizadores para instalar o Astra Trident.
@@ -183,6 +190,7 @@ Bandeiras -
 
 
 
+[[logs]]
 == `logs`
 
 Você pode executar `logs` os sinalizadores para imprimir os logs do Astra Trident.
@@ -204,6 +212,7 @@ Bandeiras -
 
 
 
+[[send]]
 == `send`
 
 Você pode executar o `send` comando para enviar um recurso do Astra Trident.
@@ -218,6 +227,7 @@ Opção disponível
 
 
 
+[[uninstall]]
 == `uninstall`
 
 Você pode executar `uninstall` os sinalizadores para desinstalar o Astra Trident.
@@ -231,6 +241,7 @@ Bandeiras: * `-h, --help`: Ajuda para desinstalar. * `--silent` : Desative a sa�
 
 
 
+[[update]]
 == `update`
 
 Você pode executar os `update` comandos para modificar um recurso no Astra Trident.
@@ -245,6 +256,7 @@ Opções disponíveis
 
 
 
+[[version]]
 == `version`
 
 Você pode executar `version` os sinalizadores para imprimir a versão do `tridentctl` e o serviço Trident em execução.

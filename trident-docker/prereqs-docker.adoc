@@ -16,6 +16,7 @@ Você precisa instalar e configurar os pré-requisitos de protocolo necessários
 
 
 
+[[verify-the-requirements]]
 == Verifique os requisitos
 
 * Verifique se sua implantação atende a todos link:../trident-get-started/requirements.html["requisitos"]os .

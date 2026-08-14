@@ -16,6 +16,7 @@ Você pode configurar o Azure NetApp Files como back-end para o Astra Trident. �
 
 
 
+[[azure-netapp-files-driver-details]]
 == Detalhes do driver Azure NetApp Files
 
 O Astra Trident fornece os seguintes drivers de storage Azure NetApp Files para se comunicar com o cluster. Os modos de acesso suportados são: _ReadWriteOnce_ (RWO), _ReadOnlyMuy_ (ROX), _ReadWriteMany_ (RWX), _ReadWriteOncePod_ (RWOP).
@@ -37,6 +38,7 @@ RWO, ROX, RWX, RWOP
 |===
 
 
+[[considerations]]
 == Considerações
 
 * O serviço Azure NetApp Files não oferece suporte a volumes menores que 100 GB. O Astra Trident cria automaticamente volumes de 100 GB se um volume menor for solicitado.
